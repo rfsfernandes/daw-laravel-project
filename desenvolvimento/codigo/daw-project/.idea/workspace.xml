@@ -20,11 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="936e6980-e6d3-4199-90d2-2075990cf25a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/assessments.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teachers/assessments_results.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teachers/evaluate_assessments.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teachers/schedule_assessments.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/head.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/students/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teachers/assessment_results.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teachers/evaluate_assessment.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teachers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main_layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/assessments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/topbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teachers/assessments_results.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teachers/evaluate_assessments.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teachers/schedule_assessments.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../outros/Análise do problema.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../outros/Análise do problema.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../outros/~$álise do problema.docx" beforeDir="false" />
     </list>
@@ -33,7 +43,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -164,6 +174,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -179,6 +194,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606865952369</updated>
       <workItem from="1606865954515" duration="731000" />
+      <workItem from="1606949138451" duration="5170000" />
     </task>
     <servers />
   </component>
@@ -195,8 +211,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1053" y="538" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606950868277">
+      <screen x="70" y="25" width="2490" height="1415" />
+    </state>
+    <state x="1053" y="538" key="#com.intellij.fileTypes.FileTypeChooser/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606950868277" />
+    <state x="1156" y="512" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606951783086">
+      <screen x="70" y="25" width="2490" height="1415" />
+    </state>
+    <state x="1156" y="512" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606951783086" />
     <state width="2448" height="406" key="GridCell.Tab.0.bottom" timestamp="1606866703877">
       <screen x="70" y="25" width="2490" height="1415" />
     </state>
@@ -213,5 +238,9 @@
       <screen x="70" y="25" width="2490" height="1415" />
     </state>
     <state width="2448" height="406" key="GridCell.Tab.0.right/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606866703877" />
+    <state x="980" y="345" key="run.anything.popup" timestamp="1606951032294">
+      <screen x="70" y="25" width="2490" height="1415" />
+    </state>
+    <state x="980" y="345" key="run.anything.popup/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606951032294" />
   </component>
 </project>

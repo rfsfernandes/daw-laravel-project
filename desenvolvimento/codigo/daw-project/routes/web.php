@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\StudentsController;
+use App\Http\Controllers\TeachersController;
+
+
+//Login
+
+Route::get('/', [LoginController::class, 'index']);
+Route::post('/', [LoginController::class, 'signin']);
+
+//Students
+Route::get('/students/', [StudentsController::class, 'index']);
+Route::post('/students/', [StudentsController::class, 'register']);
+
+//Teachers
+Route::get('/teachers/', [TeachersController::class, 'index']);
+Route::post('/teachers/schedule', [TeachersController::class, 'schedule']);
+Route::get('/teachers/assessments/evaluate/{id}', [TeachersController::class, 'evaluate']);
+Route::post('/teachers/assessments/evaluate/{id}', [TeachersController::class, 'grade']);
+Route::get('/teachers/assessments/results/{id}', [TeachersController::class, 'results']);
