@@ -1,0 +1,53 @@
+h5 {
+    margin-top: 5px;
+}
+
+.topbar {
+    height: 80px;
+    background-color: #F4F4F4;
+    box-shadow: 0 4px 8px -8px #718096;
+
+}
+
+.topbar-user {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    float: left;
+}
+
+.topbar-logout {
+    position: relative;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #8D93AB;
+}
+
+.btn {
+    color: #8D93AB;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'San Francisco', Fallback, sans-serif;
+}
+
+.btn i {
+    margin-left: 15px;
+}
+
+.clear {
+    clear: both;
+}
+
+.container-wrapper {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    padding: 0 50px;
+}

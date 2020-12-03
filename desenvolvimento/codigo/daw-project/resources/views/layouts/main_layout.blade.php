@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="en">
-@include('layouts.head', ['title' => $title ])
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@include('layouts.head')
+@section('title', $title)
 <body>
 @yield('content')
 </body>

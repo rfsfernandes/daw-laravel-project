@@ -1,0 +1,82 @@
+@use 'bootstrap';
+@use 'topbar';
+@use 'login/login';
+@use 'teachers/teachers';
+@use 'students/students';
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #C3CF2054;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #C3CF20;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #DBEA19;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F4F4F4;
+    font-family: 'San Francisco', Fallback, sans-serif;
+    color: #393b44;
+}
+
+.page-title {
+    font-weight: 900;
+    font-family: 'San Francisco Medium', Fallback, sans-serif;
+}
+
+.font-weight {
+    font-family: 'San Francisco Medium', Fallback, sans-serif;
+}
+
+.bottom-top-wrapper {
+    padding: 5% 0;
+}
+
+.th-center {
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'San Francisco Medium', Fallback, sans-serif;
+}
+
+.td-center {
+    text-align: center;
+}
+
+.td-first {
+    padding-left: 15px;
+}
+
+.tr-top {
+    border-bottom: 1px solid #707070;
+}
+
+.important {
+    font-family: 'San Francisco Medium', Fallback, sans-serif;
+    font-weight: 900;
+}
+
+.state-complete {
+    color: #707070;
+}
+
+.state-inprogress {
+    color: #393B44;
+}
+
+.state-clickable {
+    color: #C3CF20;
+}
+
+
