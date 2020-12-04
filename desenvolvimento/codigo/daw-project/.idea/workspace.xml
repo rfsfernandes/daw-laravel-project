@@ -20,14 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="936e6980-e6d3-4199-90d2-2075990cf25a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/arrow_and_info.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/login/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/login/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/teachers/_teachers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/teachers/_teachers.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/assessment_results.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/assessment_results.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/evaluate_assessment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/evaluate_assessment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +153,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/fonts" />
@@ -195,7 +190,7 @@
       <workItem from="1606865954515" duration="731000" />
       <workItem from="1606949138451" duration="5170000" />
       <workItem from="1606994577379" duration="24794000" />
-      <workItem from="1607116495351" duration="3381000" />
+      <workItem from="1607116495351" duration="4444000" />
     </task>
     <servers />
   </component>
