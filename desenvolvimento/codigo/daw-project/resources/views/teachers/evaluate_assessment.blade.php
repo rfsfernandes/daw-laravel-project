@@ -1,62 +1,50 @@
-@extends('layouts.main_layout', ['title' => 'Marcar Avaliações'])
+@extends('layouts.main_layout', ['title' => 'Lançar Avaliações'])
 
 @section('content')
     @include('layouts.topbar', ['topbar_title' => 'Docente - ' . 'Foo Bar'])
     <div class="container-wrapper">
         <div class="bottom-top-wrapper">
-            <h4 class="page-title">Lançar Avaliações</h4>
-            <div class="info-teachers">
-                <p><span class="font-weight">Nome do aluno: </span>Coisas</p>
-                <p><span class="font-weight">Número do aluno: </span>Coisas</p>
-                <p><span class="font-weight">Curso: </span>Coisas</p>
-            </div>
-            <div class="students-table-wrapper">
-                <table class="students-table">
-                    <tr class="tr-top">
-                        <th class="th-center">
-                            Unidade Curricular
-                        </th>
-                        <th class="th-center">
-                            Tipo de Avaliação
-                        </th>
-                        <th class="th-center">
-                            Época
-                        </th>
-                        <th class="th-center">
-                            Sala
-                        </th>
-                        <th class="th-center">
-                            Data
-                        </th>
-                        <th class="th-center">
-                            Estado
-                        </th>
-                    </tr>
-                    <?php
+            @include('layouts.arrow_and_info', ['title' => 'Lançar Avaliações'])
+            <form>
+                <div style="margin-top: 5%">
+                    <button class="btn-grade" type="submit">LANÇAR</button>
+                </div>
+                <div class="students-table-wrapper assessments-top">
+                    <table class="students-table assessments-top">
+                        <colgroup>
+                            <col span="1" style="width: 60%;">
+                            <col span="1" style="width: 20%;">
+                            <col span="1" style="width: 20%;">
+                        </colgroup>
 
-                    ?>
-                    <tr class="tr-top">
-                        <td class="td-first">
-                            Sistemas Operativos
-                        </td>
-                        <td class="td-center">
-                            Frequência
-                        </td>
-                        <td class="td-center">
-                            Normal
-                        </td>
-                        <td class="td-center">
-                            S8
-                        </td>
-                        <td class="td-center">
-                            17/12/2020
-                        </td>
-                        <td class="td-center important">
-                            17
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                        <tr class="tr-top">
+                            <th class="th-center">
+                                Nome do aluno
+                            </th>
+                            <th class="th-center">
+                                Número de aluno
+                            </th>
+                            <th class="th-center">
+                                Nota
+                            </th>
+                        </tr>
+                        <?php
+
+                        ?>
+                        <tr class="tr-top">
+                            <td class="td-first">
+                                Foo Bar Albuquerque
+                            </td>
+                            <td class="td-center">
+                                123456
+                            </td>
+                            <td class="td-center">
+                                <input class="grade-input" type="number" max="20" min="0" id="grade" name="grade" placeholder="0-20">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
         </div>
     </div>
 
