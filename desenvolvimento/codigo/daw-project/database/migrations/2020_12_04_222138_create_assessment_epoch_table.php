@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateAssessmentEpochTable extends Migration
@@ -16,8 +17,17 @@ class CreateAssessmentEpochTable extends Migration
         Schema::create('assessment_epoch', function (Blueprint $table) {
             $table->id();
             $table->string('name_epoch');
-            $table->timestamps();
+            //$table->timestamps();
         });
+
+        // Insert
+        DB::table('assessment_epoch')->insert(
+            array(
+                ['name_epoch' => 'Época Normal'],
+                ['name_epoch' => 'Época de Recurso'],
+                ['name_epoch' => 'Época Especial']
+            )
+        );
     }
 
     /**

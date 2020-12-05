@@ -20,8 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="936e6980-e6d3-4199-90d2-2075990cf25a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../.idea/Projeto.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_221700_create_assessment_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_221700_create_assessment_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222046_create_assessment_type_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222046_create_assessment_type_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222138_create_assessment_epoch_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222138_create_assessment_epoch_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222218_create_inscription_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222218_create_inscription_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222353_create_curricular_unit_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222353_create_curricular_unit_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222454_create_course_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222454_create_course_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222539_create_school_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222539_create_school_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222608_create_user_uc_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222608_create_user_uc_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222911_create_grades_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222911_create_grades_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_223037_create_user_type_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_223037_create_user_type_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,13 +171,15 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pedro\Documents\Pedro_EI\DAW\Projeto\desenvolvimento\codigo\daw-project" />
       <recent name="$PROJECT_DIR$/resources/fonts" />
       <recent name="$PROJECT_DIR$/public/img" />
     </key>
@@ -191,6 +209,8 @@
       <workItem from="1606949138451" duration="5170000" />
       <workItem from="1606994577379" duration="24794000" />
       <workItem from="1607116495351" duration="4444000" />
+      <workItem from="1607122582726" duration="1193000" />
+      <workItem from="1607124435959" duration="7184000" />
     </task>
     <servers />
   </component>
@@ -208,48 +228,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1053" y="538" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606996254530">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state x="1053" y="538" key="#com.intellij.fileTypes.FileTypeChooser/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606996254530" />
-    <state x="1156" y="512" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606951783086">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state x="1156" y="512" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606951783086" />
-    <state x="974" y="515" key="EditFileWatcherDialog" timestamp="1606997717458">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state x="974" y="515" key="EditFileWatcherDialog/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606997717458" />
-    <state width="2448" height="406" key="GridCell.Tab.0.bottom" timestamp="1606866703877">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state width="2448" height="406" key="GridCell.Tab.0.bottom/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606866703877" />
-    <state width="2448" height="406" key="GridCell.Tab.0.center" timestamp="1606866703877">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state width="2448" height="406" key="GridCell.Tab.0.center/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606866703877" />
-    <state width="2448" height="406" key="GridCell.Tab.0.left" timestamp="1606866703877">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state width="2448" height="406" key="GridCell.Tab.0.left/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606866703877" />
-    <state width="2448" height="406" key="GridCell.Tab.0.right" timestamp="1606866703877">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state width="2448" height="406" key="GridCell.Tab.0.right/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606866703877" />
-    <state x="391" y="487" width="706" height="490" key="find.popup" timestamp="1606995572198">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state x="391" y="487" width="706" height="490" key="find.popup/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606995572198" />
-    <state x="980" y="345" key="run.anything.popup" timestamp="1606995352924">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state x="980" y="345" key="run.anything.popup/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606995352924" />
-    <state x="980" y="349" width="670" height="676" key="search.everywhere.popup" timestamp="1607017744375">
-      <screen x="70" y="25" width="2490" height="1415" />
-    </state>
-    <state x="980" y="349" width="670" height="676" key="search.everywhere.popup/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1607017744375" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

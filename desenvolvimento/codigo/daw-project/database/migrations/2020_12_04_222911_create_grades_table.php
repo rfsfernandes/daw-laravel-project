@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateGradesTable extends Migration
@@ -17,8 +18,20 @@ class CreateGradesTable extends Migration
             $table->id();
             $table->integer('value');
             $table->integer('id_enrollment');
-            $table->timestamps();
+            //$table->timestamps();
         });
+
+        // Insert
+        DB::table('grades')->insert(
+            array(
+                ['value' => 14,
+                    'id_enrollment' => 3
+                ],
+                ['value' => 14,
+                    'id_enrollment' => 4
+                ]
+            )
+        );
     }
 
     /**
