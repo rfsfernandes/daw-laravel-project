@@ -22,8 +22,14 @@
     <list default="true" id="936e6980-e6d3-4199-90d2-2075990cf25a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/_topbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/_topbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/topbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/topbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teachers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +198,7 @@
       <workItem from="1606865954515" duration="731000" />
       <workItem from="1606949138451" duration="5170000" />
       <workItem from="1606994577379" duration="24794000" />
-      <workItem from="1607116495351" duration="8276000" />
+      <workItem from="1607116495351" duration="14084000" />
     </task>
     <servers />
   </component>
@@ -240,10 +246,10 @@
       <screen x="70" y="25" width="2490" height="1415" />
     </state>
     <state width="2448" height="406" key="GridCell.Tab.0.right/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606866703877" />
-    <state x="391" y="487" width="706" height="490" key="find.popup" timestamp="1606995572198">
+    <state x="391" y="487" width="706" height="548" key="find.popup" timestamp="1607130254487">
       <screen x="70" y="25" width="2490" height="1415" />
     </state>
-    <state x="391" y="487" width="706" height="490" key="find.popup/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606995572198" />
+    <state x="391" y="487" width="706" height="548" key="find.popup/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1607130254487" />
     <state x="980" y="345" key="run.anything.popup" timestamp="1606995352924">
       <screen x="70" y="25" width="2490" height="1415" />
     </state>

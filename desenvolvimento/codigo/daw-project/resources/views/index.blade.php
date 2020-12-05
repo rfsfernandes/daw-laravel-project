@@ -10,13 +10,13 @@
                     <form method="POST" action="/">
                         @csrf
                         <label class="col-12 login-label" for="email">Email na instituição:</label>
-                        <input class="col-12 login-input" type="email" id="email" name="email" value="" required>
+                        <input class="col-12 login-input" type="email" id="email" name="email" value="{{ session('_remember_email') ?? '' }}" required>
 
                         <label class="col-12 login-label" for="password" style="margin-top: 35px">Password:</label>
                         <input class="col-12 login-input" type="password" id="password" name="password" value=""
                                required>
                         <div class="col-12">
-                            <input class="login-input-remember" type="checkbox" id="remember-me" name="remember-me">
+                            <input class="login-input-remember" type="checkbox" id="remember-me" name="remember-me" {{ session('_remember_email') ?? '' ? 'checked' : '' }}>
                             <label class="login-label-remember" for="remember-me">Relembrar email</label>
                         </div>
                         <div class="col-12 button-wrapper-center">

@@ -1,7 +1,8 @@
 @extends('layouts.main_layout', ['title' => 'Marcar Avaliações'])
 
 @section('content')
-    @include('layouts.topbar', ['topbar_title' => 'Docente - ' . 'Foo Bar'])
+
+    @include('layouts.topbar', ['topbar_title' => 'Docente - ' .  session('_user_content')->name])
     <div class="container-wrapper">
         <div class="bottom-top-wrapper">
             <h4 class="page-title">Marcar Avaliação</h4>

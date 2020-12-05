@@ -9,29 +9,11 @@ h5 {
 
 }
 
-.topbar-user {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    float: left;
-}
 
-.topbar-logout {
-    position: relative;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #8D93AB;
-}
 
 .btn {
     color: #8D93AB;
     border: none;
-    padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
     font-family: 'San Francisco', Fallback, sans-serif;
