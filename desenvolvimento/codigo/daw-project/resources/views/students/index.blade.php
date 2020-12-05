@@ -6,19 +6,49 @@
             <div class="dialog-text">
                 <h4 class="font-weight">Deseja inscrever-se na seguinte avaliação?</h4>
                 <div>
-                    <p><span class="font-weight">Unidade curricular: </span>Coisas</p>
-                    <p><span class="font-weight">Tipo de avaliação: </span>Coisas</p>
-                    <p><span class="font-weight">Época: </span>Coisas</p>
+                    <p><span class="font-weight">Unidade curricular: </span><span id="uc">Coisas</span></p>
+                    <p><span class="font-weight">Tipo de avaliação: </span><span id="type">Coisas</span></p>
+                    <p><span class="font-weight">Época: </span><span id="epoch">Coisas</span></p>
                 </div>
             </div>
 
             <div class="dialog-btn-container">
-                <button class="dialog-btn cancel">CANCELAR</button>
-                <button class="dialog-btn confirm">INSCREVER</button>
+                <button onclick="cancel()" class="dialog-btn cancel">CANCELAR</button>
+                <form method="POST" action="/students/register" style="flex: 1; width: 100%">
+                    <button type="submit" class="dialog-btn confirm">INSCREVER</button>
+                    <input hidden id="hidden_user" name="user_id">
+                    <input hidden id="hidden_assessment" name="assessment_id">
+                </form>
             </div>
 
         </div>
     </div>
+
+    <script>
+        var showModel = false;
+        let overlay = document.getElementById('dark-overlay');
+        let view_uc = document.getElementById('uc');
+        let view_type = document.getElementById('type');
+        let view_epoch = document.getElementById('epoch');
+
+        let input_user = document.getElementById('type');
+        let input_assessment = document.getElementById('epoch');
+
+        function showModal(user_id, assessment_id, uc, type, epoch) {
+            view_uc.innerHTML = uc;
+            view_type.innerHTML = type;
+            view_epoch.innerHTML = epoch;
+            input_user.value = user_id;
+            input_assessment.value = assessment_id;
+            overlay.style.display = "flex";
+        }
+
+        function cancel(){
+            overlay.style.display = "none";
+        }
+
+    </script>
+
     @include('layouts.topbar', ['topbar_title' => 'Estudante - ' . $info_user->name ])
     <div class="container-wrapper">
         <div class="bottom-top-wrapper">
@@ -73,7 +103,15 @@
                                 @elseif(!$assessment && $assessment->enrollment)
                                     <span class="state-inprogress">INSCRITO</span>
                                 @else
-                                    <a href="" class="state-complete" style="text-decoration: none">INSCREVER</a>
+
+                                    <input name="assessment_id" hidden value="{{ $assessment->id }}">
+                                    <input name="user_id" hidden value="{{ $info_user->number }}">
+                                    <button onclick="showModal('{{ $info_user->number }}', '{{ $info_user->number }}',
+                                        '{{$assessment->uc}}', '{{$assessment->assess_type}}', '{{$assessment->epoch}}', )"
+                                            class="state-complete" style="text-decoration: none">
+                                        INSCREVER
+                                    </button>
+
                                 @endif
 
                             </td>

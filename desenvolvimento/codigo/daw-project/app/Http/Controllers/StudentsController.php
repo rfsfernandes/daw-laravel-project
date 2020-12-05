@@ -20,7 +20,11 @@ class StudentsController extends Controller
         $user = session('_user_content');
 
         if(!$user || $user->id_user_type != 2) {
-            return view('index');
+            if(!$user) {
+                return redirect('/');
+            } else {
+                return redirect('/teachers');
+            }
         }
 
         $userUc = UserUC::where('id_student', $user->id)->get();
@@ -53,7 +57,8 @@ class StudentsController extends Controller
                 'epoch' => $epoch ? $epoch['name_epoch'] : $epoch,
                 'classroom' => $assessment->classroom,
                 'enrollment' => $enrollment ?? NULL,
-                'grade' => $grade ? $grade->value : NULL
+                'grade' => $grade ? $grade->value : NULL,
+                'id' => $assessment->id
 
             );
 

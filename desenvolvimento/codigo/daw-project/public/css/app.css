@@ -11138,17 +11138,16 @@ button {
 
 .dialog-btn {
   height: 56px;
-  flex: 1;
   font-family: "San Francisco Medium", Fallback, sans-serif;
   border: none;
 }
 
 .confirm {
   height: 56px;
-  flex: 1;
   background-color: #C3CF20;
   color: #F4F4F4;
   border-radius: 0 0 8px 0;
+  width: 100%;
 }
 
 .cancel {
@@ -11231,13 +11230,19 @@ body {
 
 .state-complete {
   color: #707070;
+  border: none;
+  background-color: #F4F4F4;
 }
 
 .state-inprogress {
   color: #393B44;
+  border: none;
+  background-color: #F4F4F4;
 }
 
 .state-clickable {
   color: #C3CF20;
+  border: none;
+  background-color: #F4F4F4;
 }
 

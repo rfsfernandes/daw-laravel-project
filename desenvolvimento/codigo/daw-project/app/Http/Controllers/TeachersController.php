@@ -10,8 +10,12 @@ class TeachersController extends Controller
     public function index(){
         $user = session('_user_content');
 
-        if(!$user || $user->id_user_type != 2) {
-            return view('index');
+        if(!$user || $user->id_user_type != 1) {
+            if(!$user) {
+                return redirect('/');
+            } else {
+                return redirect('/students');
+            }
         }
 
         return view('teachers.index');

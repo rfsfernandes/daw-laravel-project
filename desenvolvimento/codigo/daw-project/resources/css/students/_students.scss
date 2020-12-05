@@ -37,20 +37,20 @@
 
 .dialog-btn {
     height: 56px;
-    flex: 1;
+
     font-family: 'San Francisco Medium', Fallback, sans-serif;
     border: none;
 }
 
-.confirm{
+.confirm {
     height: 56px;
-    flex: 1;
     background-color: #C3CF20;
     color: #F4F4F4;
     border-radius: 0 0 8px 0;
+    width: 100%;
 }
 
-.cancel{
+.cancel {
     height: 56px;
     flex: 1;
     color: #C3CF20;
