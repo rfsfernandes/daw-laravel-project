@@ -16,30 +16,34 @@ class CreateInscriptionTable extends Migration
     {
         Schema::create('inscription', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_evaluation');
-            $table->integer('id_student');
+            $table->unsignedBigInteger('id_assessment');
+            $table->unsignedBigInteger('id_student');
             //$table->timestamps();
+
+            // Foreign Keys
+            $table->foreign('id_assessment')->references('id')->on('assessment');
+            $table->foreign('id_student')->references('id')->on('user');
         });
 
         // Insert
         DB::table('inscription')->insert(
             array(
-                ['id_evaluation' => 1,
+                ['id_assessment' => 1,
                     'id_student' => 1
                 ],
-                ['id_evaluation' => 1,
+                ['id_assessment' => 1,
                     'id_student' => 2
                 ],
-                ['id_evaluation' => 2,
+                ['id_assessment' => 2,
                     'id_student' => 1
                 ],
-                ['id_evaluation' => 2,
+                ['id_assessment' => 2,
                     'id_student' => 2
                 ],
-                ['id_evaluation' => 3,
+                ['id_assessment' => 3,
                     'id_student' => 1
                 ],
-                ['id_evaluation' => 3,
+                ['id_assessment' => 3,
                     'id_student' => 2
                 ]
             )

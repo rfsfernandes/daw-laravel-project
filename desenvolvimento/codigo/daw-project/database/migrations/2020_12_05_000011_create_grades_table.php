@@ -17,8 +17,11 @@ class CreateGradesTable extends Migration
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
             $table->integer('value');
-            $table->integer('id_enrollment');
+            $table->unsignedBigInteger('id_enrollment');
             //$table->timestamps();
+
+            // Foreign Keys
+            $table->foreign('id_enrollment')->references('id')->on('inscription');
         });
 
         // Insert

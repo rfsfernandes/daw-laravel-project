@@ -16,16 +16,16 @@ class CreateAssessmentTypeTable extends Migration
     {
         Schema::create('assessment_type', function (Blueprint $table) {
             $table->id();
-            $table->string('name_evaluation');
+            $table->string('name_assessment_type');
             //$table->timestamps();
         });
 
         // Insert
         DB::table('assessment_type')->insert(
             array(
-                ['name_evaluation' => 'Frequência'],
-                ['name_evaluation' => 'Exame'],
-                ['name_evaluation' => 'Projeto']
+                ['name_assessment_type' => 'Frequência'],
+                ['name_assessment_type' => 'Exame'],
+                ['name_assessment_type' => 'Projeto']
             )
         );
     }

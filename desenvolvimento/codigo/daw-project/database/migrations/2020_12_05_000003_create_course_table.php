@@ -15,10 +15,16 @@ class CreateCourseTable extends Migration
     public function up()
     {
         Schema::create('course', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+
             $table->id();
             $table->string('name_course');
-            $table->integer('id_school');
+            $table->unsignedBigInteger('id_school');
             //$table->timestamps();
+
+            // Foreign Keys
+            $table->foreign('id_school')->references('id')->on('school');
         });
 
         // Insert
