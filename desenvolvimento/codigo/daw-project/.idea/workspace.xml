@@ -19,26 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936e6980-e6d3-4199-90d2-2075990cf25a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../.idea/Projeto.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_221700_create_assessment_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_221700_create_assessment_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222046_create_assessment_type_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222046_create_assessment_type_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222138_create_assessment_epoch_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222138_create_assessment_epoch_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222218_create_inscription_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222218_create_inscription_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222353_create_curricular_unit_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222353_create_curricular_unit_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222454_create_course_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222454_create_course_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222539_create_school_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222539_create_school_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222608_create_user_uc_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222608_create_user_uc_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_222911_create_grades_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_222911_create_grades_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_04_223037_create_user_type_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_04_223037_create_user_type_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-    </list>
+    <list default="true" id="936e6980-e6d3-4199-90d2-2075990cf25a" name="Default Changelist" comment="Populated the tables" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,8 +191,16 @@
       <workItem from="1606994577379" duration="24794000" />
       <workItem from="1607116495351" duration="4444000" />
       <workItem from="1607122582726" duration="1193000" />
-      <workItem from="1607124435959" duration="7184000" />
+      <workItem from="1607124435959" duration="7594000" />
     </task>
+    <task id="LOCAL-00001" summary="Populated the tables">
+      <created>1607132970376</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607132970376</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +217,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Populated the tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Populated the tables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
