@@ -41,13 +41,13 @@
                                    placeholder="Sala"/>
                         </div>
                         <div class="col-md-2">
-                            <input class="col-12 input-backgound" type="time"/>
+                            <input class="col-12 input-backgound" type="time" name="time"/>
                         </div>
                         <div class="col-md-4">
-                            <input class="col-12 input-backgound" type="date"/>
+                            <input class="col-12 input-backgound" type="date" name="date"/>
                         </div>
                         <div class="col-md-4">
-                            <button class="col-12 btn-schedule" type="submit" name="submit" id="submit" value="submit">
+                            <button class="col-12 btn-schedule" type="submit" id="submit" value="submit">
                                 MARCAR
                             </button>
                         </div>
