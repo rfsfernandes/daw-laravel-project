@@ -13,22 +13,25 @@
                         <div class="col-md-4" style="width: 100%;">
                             <select class="col-12 input-backgound" id="uc" name="uc">
                                 <option disabled selected value="default">Unidade Curricular</option>
+                                @foreach($ucsnames as $ucname)
+                                    <option value="{{ $ucname->id }}">{{ $ucname->name_uc }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="col-md-4">
                             <select class="col-12 input-backgound" id="type" name="type">
                                 <option disabled selected value="default">Tipo de avaliação</option>
-                                @foreach()
-                                <option value="exam">Exame</option>
-                                <option value="freq">Frequência</option>
+                                @foreach($assesstype as $type)
+                                    <option value="{{ $type->id }}">{{ $type->name_assessment_type }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="col-md-4">
                             <select class="col-12 input-backgound" id="uc" name="uc">
                                 <option disabled selected value="default">Época</option>
-                                <option value="normal">Normal</option>
-                                <option value="rec">Recurso</option>
-                                <option value="special">Especial</option>
+                                <@foreach($epochs as $epoch)
+                                    <option value="{{ $epoch->id }}">{{ $epoch->name_epoch }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

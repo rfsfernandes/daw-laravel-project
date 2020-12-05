@@ -27,19 +27,19 @@ class TeachersController extends Controller
 
         $ucscall = UserUC::select('id_uc')->where('id_user', $user->id)->get();
 
-        $ucsnames = CurricularUnit::select('name_uc')->whereIn('id', $ucscall)->get();
+        $ucsnames = CurricularUnit::whereIn('id', $ucscall)->get();
 
-        $assesstype = AssessmentType::select('name_assessment_type')->get();
+        $assesstype = AssessmentType::get();
 
-        $epoch = AssessmentEpoch::select('name_epoch')->get();
-
-
-//        $assessmentInfo = $this->assessmentsInfo($user->id);
+        $epoch = AssessmentEpoch::get();
 
 
-//        return view('teachers.index', ['ucsnames' => $ucsnames,
-//            'assesstype' => $assesstype, 'epochs' => $epoch, 'assessments' => $assessmentInfo]);
-        return view('teachers.index');
+        $assessmentInfo = $this->assessmentsInfo($user->id);
+
+
+        return view('teachers.index', ['ucsnames' => $ucsnames,
+            'assesstype' => $assesstype, 'epochs' => $epoch, 'assessments' => $assessmentInfo]);
+//        return view('teachers.index');
     }
 
     function assessmentsInfo(int $user){
@@ -52,7 +52,7 @@ class TeachersController extends Controller
 
         foreach ($assessments as $assessment) {
 
-            $uc = $assessment->curricularUnit();
+            $uc = CurricularUnit::select('name_uc')->where('id', $assessment->id_uc)->first();
             $assementType = AssessmentType::where('id', $assessment->id_assessment_type)->first();
             $epoch = AssessmentEpoch::where('id', $assessment->id_epoch)->first();
 
@@ -64,9 +64,9 @@ class TeachersController extends Controller
 //                $hasBeenDone = true;
 //            }
 
-            $mObject = (object)array(
+            $mObject = array(
                 'datetime' => $assessment->datetime,
-                'uc' => $uc ? $uc['name_uc'] : '',
+                'uc' => $uc ? $uc->name_uc : '',
                 'assess_type' => $assementType ? $assementType['name_assessment_type'] : $assementType,
                 'epoch' => $epoch ? $epoch['name_epoch'] : $epoch,
                 'classroom' => $assessment->classroom,
