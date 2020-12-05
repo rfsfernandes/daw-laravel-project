@@ -30,7 +30,7 @@ class CreateCourseTable extends Migration
         // Insert
         DB::table('course')->insert(
             array(
-                ['name_course' => 'Engenharia Infomrática',
+                ['name_course' => 'Engenharia Informática',
                     'id_school' => 1],
 
                 ['name_course' => 'Audiovisual e Multimédia',

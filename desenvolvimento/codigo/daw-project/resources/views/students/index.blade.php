@@ -19,14 +19,14 @@
 
         </div>
     </div>
-    @include('layouts.topbar', ['topbar_title' => 'Estudante - ' . session('_user_content')->name])
+    @include('layouts.topbar', ['topbar_title' => 'Estudante - ' . $info_user->name ])
     <div class="container-wrapper">
         <div class="bottom-top-wrapper">
             <h4 class="page-title">Avaliações</h4>
             <div class="info">
-                <p><span class="font-weight">Nome do aluno: </span>Coisas</p>
-                <p><span class="font-weight">Número do aluno: </span>Coisas</p>
-                <p><span class="font-weight">Curso: </span>Coisas</p>
+                <p><span class="font-weight">Nome do aluno: </span>{{ $info_user->name }}</p>
+                <p><span class="font-weight">Número do aluno: </span>{{ $info_user->number }}</p>
+                <p><span class="font-weight">Curso: </span>{{ $info_user->course }}</p>
             </div>
             <div class="students-table-wrapper">
                 <table class="students-table">
@@ -50,29 +50,35 @@
                             Estado
                         </th>
                     </tr>
-                    <?php
+                    @foreach($info_table as $assessment)
+                        <tr class="tr-top">
+                            <td class="td-first">
+                                {{$assessment->uc}}
+                            </td>
+                            <td class="td-center">
+                                {{$assessment->assess_type}}
+                            </td>
+                            <td class="td-center">
+                                {{$assessment->epoch}}
+                            </td>
+                            <td class="td-center">
+                                {{$assessment->classroom}}
+                            </td>
+                            <td class="td-center">
+                                {{$assessment->datetime}}
+                            </td>
+                            <td class="td-center important">
+                                @if($assessment->grade && $assessment->enrollment)
+                                    <span class="state-clickable">{{ $assessment->grade }}</span>
+                                @elseif(!$assessment && $assessment->enrollment)
+                                    <span class="state-inprogress">INSCRITO</span>
+                                @else
+                                    <a href="" class="state-complete" style="text-decoration: none">INSCREVER</a>
+                                @endif
 
-                    ?>
-                    <tr class="tr-top">
-                        <td class="td-first">
-                            Sistemas Operativos
-                        </td>
-                        <td class="td-center">
-                            Frequência
-                        </td>
-                        <td class="td-center">
-                            Normal
-                        </td>
-                        <td class="td-center">
-                            S8
-                        </td>
-                        <td class="td-center">
-                            17/12/2020
-                        </td>
-                        <td class="td-center important">
-                            17
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
+                    @endforeach
                 </table>
             </div>
         </div>

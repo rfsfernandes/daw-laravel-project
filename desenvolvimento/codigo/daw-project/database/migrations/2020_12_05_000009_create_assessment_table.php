@@ -20,6 +20,7 @@ class CreateAssessmentTable extends Migration
             $table->unsignedBigInteger('id_uc');
             $table->unsignedBigInteger('id_assessment_type');
             $table->unsignedBigInteger('id_epoch');
+            $table->string('classroom');
             //$table->timestamps();
 
             // Foreign Keys
@@ -33,22 +34,26 @@ class CreateAssessmentTable extends Migration
                 ['datetime' => '2020-12-09 23:59:59',
                     'id_uc' => 1,
                     'id_assessment_type' => 3,
-                    'id_epoch' => 1
+                    'id_epoch' => 1,
+                    'classroom' => 'S8'
                 ],
                 ['datetime' => '2020-12-04 23:59:59',
                     'id_uc' => 2,
                     'id_assessment_type' => 3,
-                    'id_epoch' => 1
+                    'id_epoch' => 1,
+                    'classroom' => 'L14'
                 ],
                 ['datetime' => '2021-01-15 10:00:00',
                     'id_uc' => 1,
                     'id_assessment_type' => 1,
-                    'id_epoch' => 1
+                    'id_epoch' => 1,
+                    'classroom' => 'L9'
                 ],
                 ['datetime' => '2021-02-25 14:00:00',
                     'id_uc' => 2,
                     'id_assessment_type' => 3,
-                    'id_epoch' => 1
+                    'id_epoch' => 1,
+                    'classroom' => 'S4'
                 ]
             )
         );

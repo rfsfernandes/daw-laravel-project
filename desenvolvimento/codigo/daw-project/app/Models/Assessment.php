@@ -13,16 +13,16 @@ class Assessment extends Model
 
     public function curricularUnit()
     {
-        return $this->hasOne('App\Models\CurricularUnit', 'id')->first();
+        return $this->belongsTo('App\Models\CurricularUnit', 'id')->first();
     }
 
     public function epoch()
     {
-        return $this->hasOne('App\Models\AssessmentEpoch', 'id')->first();
+        return $this->belongsTo('App\Models\AssessmentEpoch', 'id')->first();
     }
 
     public function assessmentType()
     {
-        return $this->hasOne('App\Models\AssessmentType', 'id')->first();
+        return $this->belongsTo('App\Models\AssessmentType', 'id')->first();
     }
 }
