@@ -18,6 +18,6 @@ class Inscription extends Model
 
     public function student()
     {
-        return $this->hasOne('App\Models\User', 'id_student');
+        return $this->hasOne('App\Models\User', 'id_user');
     }
 }

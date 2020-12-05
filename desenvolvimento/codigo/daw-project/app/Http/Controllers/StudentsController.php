@@ -6,6 +6,7 @@ use App\Models\Assessment;
 use App\Models\AssessmentEpoch;
 use App\Models\AssessmentType;
 use App\Models\Course;
+use App\Models\CurricularUnit;
 use App\Models\Grades;
 use App\Models\Inscription;
 use App\Models\User;
@@ -42,20 +43,15 @@ class StudentsController extends Controller
 
     function assessmentsInfo(int $user){
 
-        $userUc = UserUC::where('id_student', $user)->get();
-        $ucIds = array();
+        $userUc = UserUC::select('id_uc')->where('id_user', $user)->get();
 
-        foreach ($userUc as $uc) {
-            array_push($ucIds, $uc['id_uc']);
-        }
-
-        $assessments = Assessment::whereIn('id_uc', $ucIds)->get();
+        $assessments = Assessment::whereIn('id_uc', $userUc)->get();
 
         $data = array();
 
         foreach ($assessments as $assessment) {
 
-            $uc = $assessment->curricularUnit();
+            $uc = CurricularUnit::select('name_uc')->where('id', $assessment->id_uc)->first();
             $assementType = AssessmentType::where('id', $assessment->id_assessment_type)->first();
             $epoch = AssessmentEpoch::where('id', $assessment->id_epoch)->first();
             $enrollment = Inscription::where('id_assessment', $assessment->id)->where('id_student', session('_user_content')->id)->first();
@@ -68,7 +64,7 @@ class StudentsController extends Controller
 
             $mObject = (object)array(
                 'datetime' => $assessment->datetime,
-                'uc' => $uc ? $uc['name_uc'] : '',
+                'uc' => $uc ? $uc->name_uc : '',
                 'assess_type' => $assementType ? $assementType['name_assessment_type'] : $assementType,
                 'epoch' => $epoch ? $epoch['name_epoch'] : $epoch,
                 'classroom' => $assessment->classroom,

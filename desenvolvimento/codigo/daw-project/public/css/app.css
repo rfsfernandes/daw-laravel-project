@@ -11099,6 +11099,16 @@ button {
   font-family: "San Francisco Medium", Fallback, sans-serif;
 }
 
+.input-backgound {
+  border: none;
+  border-radius: 8px;
+  background-color: #d6e0f0;
+}
+
+.input-padding-right {
+  padding-right: 15px;
+}
+
 .info {
   margin-top: 8%;
 }

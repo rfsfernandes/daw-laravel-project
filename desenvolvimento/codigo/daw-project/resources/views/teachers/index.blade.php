@@ -11,19 +11,20 @@
 
                     <div class="row" style="height: 36px">
                         <div class="col-md-4" style="width: 100%;">
-                            <select class="col-12" id="uc" name="uc">
+                            <select class="col-12 input-backgound" id="uc" name="uc">
                                 <option disabled selected value="default">Unidade Curricular</option>
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <select class="col-12" id="type" name="type">
+                            <select class="col-12 input-backgound" id="type" name="type">
                                 <option disabled selected value="default">Tipo de avaliação</option>
+                                @foreach()
                                 <option value="exam">Exame</option>
                                 <option value="freq">Frequência</option>
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <select class="col-12" id="uc" name="uc">
+                            <select class="col-12 input-backgound" id="uc" name="uc">
                                 <option disabled selected value="default">Época</option>
                                 <option value="normal">Normal</option>
                                 <option value="rec">Recurso</option>
@@ -33,14 +34,14 @@
                     </div>
                     <div class="row" style="height: 36px; margin-top: 25px;  margin-bottom: 25px">
                         <div class="col-md-2">
-                            <input class="col-12" style="margin: 0" type="text" id="room" name="room"
+                            <input class="col-12 input-backgound" style="margin: 0" type="text" id="room" name="room"
                                    placeholder="Sala"/>
                         </div>
                         <div class="col-md-2">
-                            <input class="col-12" type="time"/>
+                            <input class="col-12 input-backgound" type="time"/>
                         </div>
                         <div class="col-md-4">
-                            <input class="col-12" type="date"/>
+                            <input class="col-12 input-backgound" type="date"/>
                         </div>
                         <div class="col-md-4">
                             <button class="col-12 btn-schedule" type="submit" name="submit" id="submit" value="submit">

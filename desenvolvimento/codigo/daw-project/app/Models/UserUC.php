@@ -13,11 +13,11 @@ class UserUC extends Model
 
     public function student()
     {
-        return $this->hasOne('App\Models\User', 'id_student');
+        return $this->hasOne('App\Models\User', 'id');
     }
 
     public function curricularUnit()
     {
-        return $this->hasOne('App\Models\CurricularUnit', 'id_uc');
+        return $this->hasOne('App\Models\CurricularUnit', 'id');
     }
 }

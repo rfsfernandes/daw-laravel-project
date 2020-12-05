@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Assessment;
+use App\Models\AssessmentEpoch;
+use App\Models\AssessmentType;
+use App\Models\CurricularUnit;
+use App\Models\Grades;
+use App\Models\Inscription;
+use App\Models\UserUC;
 use Illuminate\Http\Request;
 
 class TeachersController extends Controller
@@ -18,7 +25,62 @@ class TeachersController extends Controller
             }
         }
 
+        $ucscall = UserUC::select('id_uc')->where('id_user', $user->id)->get();
+
+        $ucsnames = CurricularUnit::select('name_uc')->whereIn('id', $ucscall)->get();
+
+        $assesstype = AssessmentType::select('name_assessment_type')->get();
+
+        $epoch = AssessmentEpoch::select('name_epoch')->get();
+
+
+//        $assessmentInfo = $this->assessmentsInfo($user->id);
+
+
+//        return view('teachers.index', ['ucsnames' => $ucsnames,
+//            'assesstype' => $assesstype, 'epochs' => $epoch, 'assessments' => $assessmentInfo]);
         return view('teachers.index');
+    }
+
+    function assessmentsInfo(int $user){
+
+        $userUc = UserUC::select('id_uc')->where('id_user', $user)->get();
+
+        $assessments = Assessment::whereIn('id_uc', $userUc)->get();
+
+        $data = array();
+
+        foreach ($assessments as $assessment) {
+
+            $uc = $assessment->curricularUnit();
+            $assementType = AssessmentType::where('id', $assessment->id_assessment_type)->first();
+            $epoch = AssessmentEpoch::where('id', $assessment->id_epoch)->first();
+
+            $grades = count(Grades::whereIn('id_enrollment', Inscription::select('id')->where('id_assessment', $assessment->id)->get())->get());
+            $hasBeenDone = false;
+//            if (strtotime((new DateTime())->format("Y-m-d H:i:s")) > strtotime($assessment->datetime)) {
+//                $hasBeenDone = false;
+//            } else {
+//                $hasBeenDone = true;
+//            }
+
+            $mObject = (object)array(
+                'datetime' => $assessment->datetime,
+                'uc' => $uc ? $uc['name_uc'] : '',
+                'assess_type' => $assementType ? $assementType['name_assessment_type'] : $assementType,
+                'epoch' => $epoch ? $epoch['name_epoch'] : $epoch,
+                'classroom' => $assessment->classroom,
+                'gradesLaunched' => $grades ? true : false,
+                'id' => $assessment->id,
+//                'hasBeenDone' => $hasBeenDone
+
+            );
+
+            array_push($data, $mObject);
+
+        }
+
+        return $data;
     }
 
     //Schedule assessments

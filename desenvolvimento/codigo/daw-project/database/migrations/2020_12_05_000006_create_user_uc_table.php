@@ -16,34 +16,34 @@ class CreateUserUcTable extends Migration
     {
         Schema::create('user_uc', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_student');
+            $table->unsignedBigInteger('id_user');
             $table->unsignedBigInteger('id_uc');
             //$table->timestamps();
 
             // Foreign Keys
-            $table->foreign('id_student')->references('id')->on('user');
+            $table->foreign('id_user')->references('id')->on('user');
             $table->foreign('id_uc')->references('id')->on('curricular_unit');
         });
 
         // Insert
         DB::table('user_uc')->insert(
             array(
-                ['id_student' => 1,
+                ['id_user' => 1,
                     'id_uc' => 1
                 ],
-                ['id_student' => 1,
+                ['id_user' => 1,
                     'id_uc' => 2
                 ],
-                ['id_student' => 2,
+                ['id_user' => 2,
                     'id_uc' => 1
                 ],
-                ['id_student' => 2,
+                ['id_user' => 2,
                     'id_uc' => 2
                 ],
-                ['id_student' => 3,
+                ['id_user' => 3,
                     'id_uc' => 1
                 ],
-                ['id_student' => 3,
+                ['id_user' => 3,
                     'id_uc' => 2
                 ]
             )
