@@ -42,4 +42,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function userType()
+    {
+        return $this->hasOne('App\Models\UserType', 'id_user_type');
+    }
+
+    public function userUC()
+    {
+        return $this->hasOne('App\Models\UserUC', 'id_course');
+    }
 }

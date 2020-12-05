@@ -9,4 +9,9 @@ class Grades extends Model
 {
     use HasFactory;
     protected $table = 'grades';
+
+    public function inscription()
+    {
+        return $this->hasOne('App\Models\Inscription', 'id_enrollment');
+    }
 }
