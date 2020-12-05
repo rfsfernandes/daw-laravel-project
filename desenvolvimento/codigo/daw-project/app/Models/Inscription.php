@@ -9,4 +9,14 @@ class Inscription extends Model
 {
     use HasFactory;
     protected $table = 'inscription';
+
+    public function assessment()
+    {
+        return $this->hasOne('App\Models\Assessment', 'id_evaluation');
+    }
+
+    public function student()
+    {
+        return $this->hasOne('App\Models\User', 'id_student');
+    }
 }

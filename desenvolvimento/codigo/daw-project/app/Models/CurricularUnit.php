@@ -9,4 +9,9 @@ class CurricularUnit extends Model
 {
     use HasFactory;
     protected $table = 'curricular_unit';
+
+    public function course()
+    {
+        return $this->hasOne('App\Models\Course', 'id_course');
+    }
 }
