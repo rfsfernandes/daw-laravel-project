@@ -9,6 +9,7 @@ class Grades extends Model
 {
     use HasFactory;
     protected $table = 'grades';
+    public $timestamps = false;
 
     public function inscription()
     {

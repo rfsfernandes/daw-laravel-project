@@ -9,6 +9,7 @@ class UserUC extends Model
 {
     use HasFactory;
     protected $table = 'user_uc';
+    public $timestamps = false;
 
     public function student()
     {

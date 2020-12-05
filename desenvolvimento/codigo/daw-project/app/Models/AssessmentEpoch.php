@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class AssessmentEpoch extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     protected $table = 'assessment_epoch';
 }

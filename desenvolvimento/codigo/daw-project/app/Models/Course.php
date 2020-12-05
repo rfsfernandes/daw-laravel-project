@@ -9,6 +9,7 @@ class Course extends Model
 {
     use HasFactory;
     protected $table = 'course';
+    public $timestamps = false;
 
     public function school()
     {

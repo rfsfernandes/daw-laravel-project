@@ -14,7 +14,8 @@
 
             <div class="dialog-btn-container">
                 <button onclick="cancel()" class="dialog-btn cancel">CANCELAR</button>
-                <form method="POST" action="/students/register" style="flex: 1; width: 100%">
+                <form method="POST" action="/students" style="flex: 1; width: 100%">
+                    @csrf
                     <button type="submit" class="dialog-btn confirm">INSCREVER</button>
                     <input hidden id="hidden_user" name="user_id">
                     <input hidden id="hidden_assessment" name="assessment_id">
@@ -25,14 +26,13 @@
     </div>
 
     <script>
-        var showModel = false;
         let overlay = document.getElementById('dark-overlay');
         let view_uc = document.getElementById('uc');
         let view_type = document.getElementById('type');
         let view_epoch = document.getElementById('epoch');
 
-        let input_user = document.getElementById('type');
-        let input_assessment = document.getElementById('epoch');
+        let input_user = document.getElementById('hidden_user');
+        let input_assessment = document.getElementById('hidden_assessment');
 
         function showModal(user_id, assessment_id, uc, type, epoch) {
             view_uc.innerHTML = uc;
@@ -81,7 +81,7 @@
                         </th>
                     </tr>
                     @foreach($info_table as $assessment)
-                        <tr class="tr-top">
+                        <tr class="tr-top tr-content">
                             <td class="td-first">
                                 {{$assessment->uc}}
                             </td>
@@ -100,13 +100,11 @@
                             <td class="td-center important">
                                 @if($assessment->grade && $assessment->enrollment)
                                     <span class="state-clickable">{{ $assessment->grade }}</span>
-                                @elseif(!$assessment && $assessment->enrollment)
+                                @elseif(!$assessment->grade && $assessment->enrollment)
                                     <span class="state-inprogress">INSCRITO</span>
                                 @else
 
-                                    <input name="assessment_id" hidden value="{{ $assessment->id }}">
-                                    <input name="user_id" hidden value="{{ $info_user->number }}">
-                                    <button onclick="showModal('{{ $info_user->number }}', '{{ $info_user->number }}',
+                                    <button onclick="showModal('{{ $assessment->id }}', '{{ $info_user->number }}',
                                         '{{$assessment->uc}}', '{{$assessment->assess_type}}', '{{$assessment->epoch}}', )"
                                             class="state-complete" style="text-decoration: none">
                                         INSCREVER

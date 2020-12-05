@@ -9,6 +9,7 @@ class Inscription extends Model
 {
     use HasFactory;
     protected $table = 'inscription';
+    public $timestamps = false;
 
     public function assessment()
     {
