@@ -19,7 +19,7 @@
 
         </div>
     </div>
-    @include('layouts.topbar', ['topbar_title' => 'Estudante - ' . session('_user_content')->getName()])
+    @include('layouts.topbar', ['topbar_title' => 'Estudante - ' . session('_user_content')->name])
     <div class="container-wrapper">
         <div class="bottom-top-wrapper">
             <h4 class="page-title">Avaliações</h4>
