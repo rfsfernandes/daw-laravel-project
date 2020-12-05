@@ -20,16 +20,17 @@ use App\Http\Controllers\TeachersController;
 
 //Login
 
-Route::get('/', [LoginController::class, 'index']);
-Route::post('/', [LoginController::class, 'signin']);
+Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::post('/', [LoginController::class, 'signin'])->name('login-post');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //Students
-Route::get('/students/', [StudentsController::class, 'index']);
-Route::post('/students/', [StudentsController::class, 'register']);
+Route::get('/students/', [StudentsController::class, 'index'])->name('students');
+Route::post('/students/', [StudentsController::class, 'register'])->name('register');
 
 //Teachers
-Route::get('/teachers/', [TeachersController::class, 'index']);
-Route::post('/teachers/schedule', [TeachersController::class, 'schedule']);
+Route::get('/teachers/', [TeachersController::class, 'index'])->name('teachers');
+Route::post('/teachers/schedule', [TeachersController::class, 'schedule'])->name('teachers-scheduler');
 Route::get('/teachers/assessments/evaluate/{id}', [TeachersController::class, 'evaluate']);
 Route::post('/teachers/assessments/evaluate/{id}', [TeachersController::class, 'grade']);
 Route::get('/teachers/assessments/results/{id}', [TeachersController::class, 'results']);

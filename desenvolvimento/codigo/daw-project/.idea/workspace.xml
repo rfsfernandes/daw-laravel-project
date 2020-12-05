@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936e6980-e6d3-4199-90d2-2075990cf25a" name="Default Changelist" comment="Populated the tables" />
+    <list default="true" id="936e6980-e6d3-4199-90d2-2075990cf25a" name="Default Changelist" comment="Populated the tables">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +193,7 @@
       <workItem from="1606994577379" duration="24794000" />
       <workItem from="1607116495351" duration="4444000" />
       <workItem from="1607122582726" duration="1193000" />
-      <workItem from="1607124435959" duration="7594000" />
+      <workItem from="1607124435959" duration="8002000" />
     </task>
     <task id="LOCAL-00001" summary="Populated the tables">
       <created>1607132970376</created>
