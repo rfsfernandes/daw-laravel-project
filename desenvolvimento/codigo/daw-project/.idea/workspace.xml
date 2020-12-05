@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="936e6980-e6d3-4199-90d2-2075990cf25a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +192,7 @@
       <workItem from="1606865954515" duration="731000" />
       <workItem from="1606949138451" duration="5170000" />
       <workItem from="1606994577379" duration="24794000" />
-      <workItem from="1607116495351" duration="5249000" />
+      <workItem from="1607116495351" duration="8276000" />
     </task>
     <servers />
   </component>
@@ -214,10 +216,10 @@
       <screen x="70" y="25" width="2490" height="1415" />
     </state>
     <state x="1053" y="538" key="#com.intellij.fileTypes.FileTypeChooser/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606996254530" />
-    <state x="1156" y="512" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606951783086">
+    <state x="1156" y="512" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607121789026">
       <screen x="70" y="25" width="2490" height="1415" />
     </state>
-    <state x="1156" y="512" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1606951783086" />
+    <state x="1156" y="512" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/2560.25.1536.935/70.25.2490.1415@70.25.2490.1415" timestamp="1607121789026" />
     <state x="974" y="515" key="EditFileWatcherDialog" timestamp="1606997717458">
       <screen x="70" y="25" width="2490" height="1415" />
     </state>

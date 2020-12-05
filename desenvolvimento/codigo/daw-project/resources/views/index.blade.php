@@ -7,7 +7,8 @@
                 <div class="form-container">
                     <img class="col-12" src="{{URL::asset('/img/Logo-IPBejaI.png')}}" alt="ipbeja logo">
 
-                    <form method="POST" action="">
+                    <form method="POST" action="/">
+                        @csrf
                         <label class="col-12 login-label" for="email">Email na instituição:</label>
                         <input class="col-12 login-input" type="email" id="email" name="email" value="" required>
 
@@ -15,8 +16,7 @@
                         <input class="col-12 login-input" type="password" id="password" name="password" value=""
                                required>
                         <div class="col-12">
-                            <input class="login-input-remember" type="checkbox" id="remember-me" name="remember-me"
-                                   value="false">
+                            <input class="login-input-remember" type="checkbox" id="remember-me" name="remember-me">
                             <label class="login-label-remember" for="remember-me">Relembrar email</label>
                         </div>
                         <div class="col-12 button-wrapper-center">
