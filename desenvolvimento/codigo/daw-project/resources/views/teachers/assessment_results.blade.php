@@ -6,7 +6,6 @@
         <div class="bottom-top-wrapper">
             @include('layouts.arrow_and_info', ['title' => 'Resultado da Avaliação'])
             <form>
-
                 <div class="students-table-wrapper">
                     <table class="students-table">
                         <colgroup>
@@ -26,20 +25,19 @@
                                 Nota
                             </th>
                         </tr>
-                        <?php
-
-                        ?>
-                        <tr class="tr-top">
-                            <td class="td-first">
-                                Foo Bar Albuquerque
-                            </td>
-                            <td class="td-center">
-                                123456
-                            </td>
-                            <td class="td-center">
-                                10
-                            </td>
-                        </tr>
+                        @foreach($final as $var)
+                            <tr class="tr-top">
+                                <td class="td-first">
+                                    {{$var->name}}
+                                </td>
+                                <td class="td-center">
+                                    {{$var->id}}
+                                </td>
+                                <td class="td-center">
+                                    {{$var->value}}
+                                </td>
+                            </tr>
+                        @endforeach
                     </table>
                 </div>
             </form>
