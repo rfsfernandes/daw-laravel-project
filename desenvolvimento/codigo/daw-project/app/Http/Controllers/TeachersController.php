@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Models\UserUC;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TeachersController extends Controller
 {
@@ -132,13 +133,15 @@ class TeachersController extends Controller
 
     //Results of an assessment
     public function results(Request $request, $id){
-        $grades = Grades::select('grades, id_student')->whereIn('id_enrollment', Inscription::select('id')->where('id_assessment', $id)->get())->get();
 
-        $student_ids = $grades->id_student;
+        $data = DB::table('grades')
+            ->select('inscription.id AS id_inscription', 'user.id', 'user.name', 'grades.value')
+            ->join('inscription', 'inscription.id', '=', 'grades.id_enrollment')
+            ->join('user', 'user.id', '=', 'inscription.id_student')
+            ->where('inscription.id_assessment', $id)
+            ->get();
 
-        $names =  User::select('name')->where('id', $student_ids)->get();
 
-        $final = $grades->merge($names);
-        return view('teachers.assessment_results', $final);
+        return view('teachers.assessment_results', ['final'=>$data]);
     }
 }
