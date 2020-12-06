@@ -45,7 +45,7 @@ class StudentsController extends Controller
 
         $userUc = UserUC::select('id_uc')->where('id_user', $user)->get();
 
-        $assessments = Assessment::whereIn('id_uc', $userUc)->get();
+        $assessments = Assessment::whereIn('id_uc', $userUc)->orderBy('datetime', 'asc')->get();
 
         $data = array();
 

@@ -9,12 +9,19 @@ use App\Models\CurricularUnit;
 use App\Models\Grades;
 use App\Models\Inscription;
 use App\Models\UserUC;
+use DateTime;
 use Illuminate\Http\Request;
 
 class TeachersController extends Controller
 {
     //Index
     public function index(){
+
+//        return view('teachers.index');
+       return $this->showViewIndex();
+    }
+
+    private function showViewIndex(){
         $user = session('_user_content');
 
         if(!$user || $user->id_user_type != 1) {
@@ -39,14 +46,13 @@ class TeachersController extends Controller
 
         return view('teachers.index', ['ucsnames' => $ucsnames,
             'assesstype' => $assesstype, 'epochs' => $epoch, 'assessments' => $assessmentInfo]);
-//        return view('teachers.index');
     }
 
     function assessmentsInfo(int $user){
 
         $userUc = UserUC::select('id_uc')->where('id_user', $user)->get();
 
-        $assessments = Assessment::whereIn('id_uc', $userUc)->get();
+        $assessments = Assessment::whereIn('id_uc', $userUc)->orderBy('datetime', 'asc')->get();
 
         $data = array();
 
@@ -58,13 +64,13 @@ class TeachersController extends Controller
 
             $grades = count(Grades::whereIn('id_enrollment', Inscription::select('id')->where('id_assessment', $assessment->id)->get())->get());
             $hasBeenDone = false;
-//            if (strtotime((new DateTime())->format("Y-m-d H:i:s")) > strtotime($assessment->datetime)) {
-//                $hasBeenDone = false;
-//            } else {
-//                $hasBeenDone = true;
-//            }
+            if (strtotime((new DateTime())->format("Y-m-d H:i:s")) > strtotime($assessment->datetime)) {
+                $hasBeenDone = true;
+            } else {
+                $hasBeenDone = false;
+            }
 
-            $mObject = array(
+            $mObject = (object)array(
                 'datetime' => $assessment->datetime,
                 'uc' => $uc ? $uc->name_uc : '',
                 'assess_type' => $assementType ? $assementType['name_assessment_type'] : $assementType,
@@ -72,7 +78,7 @@ class TeachersController extends Controller
                 'classroom' => $assessment->classroom,
                 'gradesLaunched' => $grades ? true : false,
                 'id' => $assessment->id,
-//                'hasBeenDone' => $hasBeenDone
+                'hasBeenDone' => $hasBeenDone
 
             );
 
@@ -84,8 +90,17 @@ class TeachersController extends Controller
     }
 
     //Schedule assessments
-    public function schedule(){
-        return view('teachers.index');
+    public function schedule(Request $request){
+        $assessment = new Assessment();
+        $assessment->datetime = $request->input('date') . " " . $request->input('time');
+        $assessment->classroom = $request->input('room');
+        $assessment->id_assessment_type = $request->input('type');
+        $assessment->id_epoch = $request->input('epoch');
+        $assessment->id_uc = $request->input('uc');
+
+        $assessment->save();
+
+        return redirect("/teachers");
     }
 
     //List of signed up students for an assessment
