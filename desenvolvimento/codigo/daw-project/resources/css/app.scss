@@ -89,4 +89,21 @@ body {
     background-color: #F4F4F4;
 }
 
+#dark-overlay.show {
+    visibility: visible;
+    -webkit-animation: fadeindark 0.5s;
+    animation: fadeindark 0.5s;
+}
+
+@-webkit-keyframes fadeindark {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 0; opacity: 1;}
+}
+
+@keyframes fadeindark {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 0; opacity: 1;}
+}
+
+
 
