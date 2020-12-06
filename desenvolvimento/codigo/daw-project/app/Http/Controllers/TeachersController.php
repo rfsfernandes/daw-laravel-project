@@ -114,7 +114,14 @@ class TeachersController extends Controller
     }
 
     //Results of an assessment
-    public function results(){
-        return view('teachers.assessment_results');
+    public function results(Request $request, $id){
+        $grades = Grades::select('grades, id_student')->whereIn('id_enrollment', Inscription::select('id')->where('id_assessment', $id)->get())->get();
+
+        $student_ids = $grades->id_student;
+
+        $names =  User::select('name')->where('id', $student_ids)->get();
+
+        $final = $grades->merge($names);
+        return view('teachers.assessment_results', $final);
     }
 }
