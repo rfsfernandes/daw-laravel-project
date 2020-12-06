@@ -8,6 +8,7 @@ use App\Models\AssessmentType;
 use App\Models\CurricularUnit;
 use App\Models\Grades;
 use App\Models\Inscription;
+use App\Models\User;
 use App\Models\UserUC;
 use DateTime;
 use Illuminate\Http\Request;
@@ -104,13 +105,29 @@ class TeachersController extends Controller
     }
 
     //List of signed up students for an assessment
-    public function evaluate(){
-        return view('teachers.evaluate_assessment');
+    public function evaluate($id){
+        $users = User::select('name', 'id')
+            ->whereIn('id', Inscription::select('id_student')
+                ->where('id_assessment', $id)->get())
+            ->get();
+
+        return view('teachers.evaluate_assessment', ['assessment_id' => $id, 'users' => $users]);
     }
 
     //Grades the students of an assessment
-    public function grade(){
-        return view('teachers.index');
+    public function grade(Request $request){
+        $userIds = $request->input('user_id');
+        $grades = $request->input('grade');
+
+        $data = array();
+
+        for ($i = 0; $i < count($userIds); $i++) {
+            array_push($data, ['value' =>  $grades[$i], 'id_enrollment' =>$userIds[$i]]);
+        }
+
+        Grades::insert($data);
+
+        return redirect("/teachers");
     }
 
     //Results of an assessment

@@ -45,6 +45,12 @@ class CreateInscriptionTable extends Migration
                 ],
                 ['id_assessment' => 3,
                     'id_student' => 2
+                ],
+                ['id_assessment' => 5,
+                    'id_student' => 1
+                ],
+                ['id_assessment' => 5,
+                    'id_student' => 2
                 ]
             )
         );

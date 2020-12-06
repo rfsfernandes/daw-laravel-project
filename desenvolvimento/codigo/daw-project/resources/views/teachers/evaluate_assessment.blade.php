@@ -5,7 +5,8 @@
     <div class="container-wrapper">
         <div class="bottom-top-wrapper">
             @include('layouts.arrow_and_info', ['title' => 'Lançar Avaliações'])
-            <form>
+            <form method="POST" action="/teachers/assessments/evaluate/{{ $assessment_id }}">
+                @csrf
                 <div style="margin-top: 5%">
                     <button class="btn-grade" type="submit">LANÇAR</button>
                 </div>
@@ -28,20 +29,22 @@
                                 Nota
                             </th>
                         </tr>
-                        <?php
+                        @foreach($users as $user)
+                            <tr class="tr-top">
+                                <td class="td-first">
+                                    {{ $user->name }}
+                                </td>
+                                <td class="td-center" >
+                                    <input hidden name="user_id[]" value="{{ $user->id }}">
+                                    {{ $user->id }}
+                                </td>
+                                <td class="td-center">
+                                    <input class="grade-input" type="number" max="20" min="0" id="grade" name="grade[]"
+                                           placeholder="0-20" required>
+                                </td>
+                            </tr>
+                        @endforeach
 
-                        ?>
-                        <tr class="tr-top">
-                            <td class="td-first">
-                                Foo Bar Albuquerque
-                            </td>
-                            <td class="td-center">
-                                123456
-                            </td>
-                            <td class="td-center">
-                                <input class="grade-input" type="number" max="20" min="0" id="grade" name="grade" placeholder="0-20">
-                            </td>
-                        </tr>
                     </table>
                 </div>
             </form>

@@ -118,7 +118,13 @@
                             </td>
                             <td class="td-center important">
                                 @if($assessment->hasBeenDone && $assessment->gradesLaunched)
-                                    <span class="state-complete">NOTAS LANÇADAS</span>
+                                    <form method="GET" action="/teachers/assessments/results/{{ $assessment->id }}">
+                                        @csrf
+                                        <button type="submit"
+                                                class="state-complete" style="text-decoration: none">
+                                            NOTAS LANÇADAS
+                                        </button>
+                                    </form>
                                 @elseif(!$assessment->hasBeenDone)
                                     <span class="state-inprogress">POR REALIZAR</span>
                                 @else
