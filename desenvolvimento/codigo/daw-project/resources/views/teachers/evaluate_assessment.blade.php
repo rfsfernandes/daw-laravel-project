@@ -29,14 +29,15 @@
                                 Nota
                             </th>
                         </tr>
-                        @foreach($users as $user)
+                        @foreach($data as $inscription)
                             <tr class="tr-top">
                                 <td class="td-first">
-                                    {{ $user->name }}
+                                    {{ $inscription->name }}
                                 </td>
                                 <td class="td-center" >
-                                    <input hidden name="user_id[]" value="{{ $user->id }}">
-                                    {{ $user->id }}
+                                    <input hidden name="user_id[]" value="{{ $inscription->id }}">
+                                    <input hidden name="enrollment_id[]" value="{{ $inscription->id_inscription }}">
+                                    {{ $inscription->id }}
                                 </td>
                                 <td class="td-center">
                                     <input class="grade-input" type="number" max="20" min="0" id="grade" name="grade[]"

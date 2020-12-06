@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Models\UserUC;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TeachersController extends Controller
 {
@@ -105,24 +106,26 @@ class TeachersController extends Controller
     }
 
     //List of signed up students for an assessment
-    public function evaluate($id){
-        $users = User::select('name', 'id')
-            ->whereIn('id', Inscription::select('id_student')
-                ->where('id_assessment', $id)->get())
+    public function evaluate(Request $request, $id){
+
+        $data = DB::table('inscription')
+            ->select('inscription.id AS id_inscription', 'user.id', 'user.name')
+            ->join('user','user.id', '=', 'inscription.id_student')
+            ->where('id_assessment', $id)
             ->get();
 
-        return view('teachers.evaluate_assessment', ['assessment_id' => $id, 'users' => $users]);
+        return view('teachers.evaluate_assessment', ['assessment_id' => $id, 'data' => $data]);
     }
 
     //Grades the students of an assessment
     public function grade(Request $request){
-        $userIds = $request->input('user_id');
+        $enrollments = $request->input('enrollment_id');
         $grades = $request->input('grade');
 
         $data = array();
 
-        for ($i = 0; $i < count($userIds); $i++) {
-            array_push($data, ['value' =>  $grades[$i], 'id_enrollment' =>$userIds[$i]]);
+        for ($i = 0; $i < count($enrollments); $i++) {
+            array_push($data, ['value' =>  $grades[$i], 'id_enrollment' =>$enrollments[$i]]);
         }
 
         Grades::insert($data);
