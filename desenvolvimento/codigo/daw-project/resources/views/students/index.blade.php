@@ -40,6 +40,7 @@
             view_epoch.innerHTML = epoch;
             input_user.value = user_id;
             input_assessment.value = assessment_id;
+            overlay.className = "show";
             overlay.style.display = "flex";
         }
 

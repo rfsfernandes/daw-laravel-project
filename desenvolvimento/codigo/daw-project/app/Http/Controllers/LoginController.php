@@ -23,7 +23,7 @@ class LoginController extends Controller
             }
         }
 
-        return view('index');
+        return view('index',['error_snack' => '']);
     }
 
     //Sign in and check user type
@@ -48,7 +48,7 @@ class LoginController extends Controller
                 return redirect('students');
             }
         } else {
-            return view('index');
+            return view('index', ['error_snack' => 'Email ou password incorretos.']);
         }
     }
 

@@ -10,7 +10,11 @@
             let epoch = document.getElementById('epoch').value;
 
             if( uc === "default" || type === "default" || epoch === "default") {
-                document.getElementById('dark-overlay').style.display = "flex";
+                var x = document.getElementById('dark-overlay');
+                // Add the "show" class to DIV
+                x.className = "show";
+
+                x.style.display = "flex";
                 return false;
             } else {
                 return true;
