@@ -11182,6 +11182,13 @@ button {
   border-radius: 0 0 8px 8px !important;
 }
 
+.edit-btn {
+  border: 0;
+  color: #C3CF20;
+  margin-left: 10px;
+  background-color: #F4F4F4;
+}
+
 .info {
   margin-top: 8%;
 }

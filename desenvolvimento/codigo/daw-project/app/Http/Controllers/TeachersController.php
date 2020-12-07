@@ -144,6 +144,6 @@ class TeachersController extends Controller
             ->get();
 
 
-        return view('teachers.assessment_results', ['final'=>$data]);
+        return view('teachers.assessment_results', ['final'=>$data, 'assessment_id'=>$id]);
     }
 }
