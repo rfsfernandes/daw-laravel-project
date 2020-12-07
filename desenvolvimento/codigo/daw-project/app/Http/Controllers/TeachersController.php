@@ -153,8 +153,8 @@ class TeachersController extends Controller
         $id_enroll = $request->input('enrollment_id');
         $grade = $request->input( 'grade');
 
-        $data = Grades::where('id_inscription', $id_enroll)->update('value', $grade);
+        Grades::where('id_enrollment', $id_enroll)->update(['value' => $grade]);
 
-        $this->results( null, $id);
+        return redirect('/teachers/assessments/results/'.$id);
     }
 }
