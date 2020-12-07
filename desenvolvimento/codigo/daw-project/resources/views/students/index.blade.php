@@ -103,6 +103,8 @@
                                     <span class="state-clickable">{{ $assessment->grade }}</span>
                                 @elseif(!$assessment->grade && $assessment->enrollment)
                                     <span class="state-inprogress">INSCRITO</span>
+                                @elseif($assessment->allow)
+                                    <span class="state-inprogress">EXPIRADO</span>
                                 @else
 
                                     <button onclick="showModal('{{ $assessment->id }}', '{{ $info_user->number }}',
