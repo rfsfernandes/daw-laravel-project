@@ -34,3 +34,4 @@ Route::post('/teachers/schedule', [TeachersController::class, 'schedule'])->name
 Route::get('/teachers/assessments/evaluate/{id}', [TeachersController::class, 'evaluate']);
 Route::post('/teachers/assessments/evaluate/{id}', [TeachersController::class, 'grade']);
 Route::get('/teachers/assessments/results/{id}', [TeachersController::class, 'results']);
+Route::post('/teachers/assessments/results/{id}', [TeachersController::class, 'edit']);

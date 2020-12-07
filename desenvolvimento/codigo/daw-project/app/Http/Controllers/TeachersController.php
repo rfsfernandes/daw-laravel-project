@@ -117,7 +117,7 @@ class TeachersController extends Controller
         return view('teachers.evaluate_assessment', ['assessment_id' => $id, 'data' => $data]);
     }
 
-    //Grades the students of an assessment
+    // Grades the students of an assessment
     public function grade(Request $request){
         $enrollments = $request->input('enrollment_id');
         $grades = $request->input('grade');
@@ -133,7 +133,7 @@ class TeachersController extends Controller
         return redirect("/teachers");
     }
 
-    //Results of an assessment
+    // Results of an assessment
     public function results(Request $request, $id){
 
         $data = DB::table('grades')
@@ -145,5 +145,16 @@ class TeachersController extends Controller
 
 
         return view('teachers.assessment_results', ['final'=>$data]);
+    }
+
+    // Edit Submitted notes
+    public function edit(Request $request, $id){
+
+        $id_enroll = $request->input('enrollment_id');
+        $grade = $request->input( 'grade');
+
+        $data = Grades::where('id_inscription', $id_enroll)->update('value', $grade);
+
+        $this->results( null, $id);
     }
 }

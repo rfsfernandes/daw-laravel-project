@@ -62,6 +62,13 @@ class StudentsController extends Controller
                 $grade = Grades::where('id_enrollment', $enrollment->id)->first();
             }
 
+            $expiredDate = false;
+            if (strtotime((new DateTime())->format("Y-m-d H:i:s")) > strtotime($assessment->datetime)) {
+                $expiredDate = true;
+            } else {
+                $expiredDate = false;
+            }
+
             $mObject = (object)array(
                 'datetime' => $assessment->datetime,
                 'uc' => $uc ? $uc->name_uc : '',
@@ -70,7 +77,8 @@ class StudentsController extends Controller
                 'classroom' => $assessment->classroom,
                 'enrollment' => $enrollment ? $enrollment : NULL,
                 'grade' => $grade ? $grade->value : NULL,
-                'id' => $assessment->id
+                'id' => $assessment->id,
+                'allow' => $expiredDate
 
             );
 
