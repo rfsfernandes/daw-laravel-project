@@ -81,6 +81,7 @@
                             Estado
                         </th>
                     </tr>
+
                     @foreach($info_table as $assessment)
                         <tr class="tr-top tr-content">
                             <td class="td-first">
@@ -99,7 +100,7 @@
                                 {{$assessment->datetime}}
                             </td>
                             <td class="td-center important">
-                                @if($assessment->grade && $assessment->enrollment)
+                                @if(is_numeric($assessment->grade) && $assessment->enrollment)
                                     <span class="state-clickable">{{ $assessment->grade }}</span>
                                 @elseif(!$assessment->grade && $assessment->enrollment)
                                     <span class="state-inprogress">INSCRITO</span>

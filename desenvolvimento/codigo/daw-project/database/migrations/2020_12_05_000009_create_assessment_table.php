@@ -56,11 +56,23 @@ class CreateAssessmentTable extends Migration
                     'classroom' => 'S4'
                 ],
                 ['datetime' => '2020-12-04 23:59:59',
-                'id_uc' => 2,
-                'id_assessment_type' => 3,
-                'id_epoch' => 2,
-                'classroom' => 'L6'
-            ]
+                    'id_uc' => 2,
+                    'id_assessment_type' => 3,
+                    'id_epoch' => 2,
+                    'classroom' => 'L6'
+                ],
+                ['datetime' => '2020-12-09 16:30:00',
+                    'id_uc' => 2,
+                    'id_assessment_type' => 2,
+                    'id_epoch' => 3,
+                    'classroom' => 'L01'
+                ],
+                ['datetime' => '2020-12-09 16:30:00',
+                    'id_uc' => 1,
+                    'id_assessment_type' => 2,
+                    'id_epoch' => 3,
+                    'classroom' => 'L01'
+                ]
             )
         );
     }
