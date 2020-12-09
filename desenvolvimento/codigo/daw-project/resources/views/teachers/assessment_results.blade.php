@@ -10,7 +10,8 @@
                 <div class="dialog-text">
                     <h4 class="font-weight">Deseja inscrever-se na seguinte avaliação?</h4>
                     <div style="display: flex">
-                        <p class="font-weight" style="flex: 1;height: 30px; margin: auto">Nota que pretende atribuir:</p>
+                        <p class="font-weight" style="flex: 1;height: 30px; margin: auto">Nota que pretende
+                            atribuir:</p>
                         <input style="flex: 1; width: 50%" class="grade-input"
                                type="number" max="20"
                                min="0" id="grade"

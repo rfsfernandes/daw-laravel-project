@@ -1,7 +1,9 @@
 <div>
     <div class="btn-back-wrapper">
         <form method="GET" action="/teachers">
-            <button type="submit" class="btn-back" name="submit" value="submit"><i class="fa fa-arrow-left icon-back"></i>VOLTAR</button>
+            <button type="submit" class="btn-back" name="submit" value="submit"><i
+                    class="fa fa-arrow-left icon-back"></i>VOLTAR
+            </button>
         </form>
     </div>
     <div>

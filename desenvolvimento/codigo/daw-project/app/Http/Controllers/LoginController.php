@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -15,7 +14,7 @@ class LoginController extends Controller
 
         $user = $request->session()->get('_user_content');
 
-        if($user) {
+        if ($user) {
             if ($user->id_user_type == 1) {
                 return redirect('/teachers');
             } else {
@@ -23,7 +22,7 @@ class LoginController extends Controller
             }
         }
 
-        return view('index',['error_snack' => '']);
+        return view('index', ['error_snack' => '']);
     }
 
     //Sign in and check user type
@@ -32,7 +31,7 @@ class LoginController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         $remember = $request->input('remember-me');
-        $user = User::where('email', $email)->where('password', $password)->first();
+        $user = User::checkCredentials($email, $password);
 
         if ($remember == "on") {
             $request->session()->put('_remember_email', $email);
@@ -53,7 +52,8 @@ class LoginController extends Controller
     }
 
     //logout
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         $request->session()->put('_user_content', '');
         return redirect()->route('login');
     }

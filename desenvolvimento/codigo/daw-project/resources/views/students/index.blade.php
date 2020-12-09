@@ -44,7 +44,7 @@
             overlay.style.display = "flex";
         }
 
-        function cancel(){
+        function cancel() {
             overlay.style.display = "none";
         }
 

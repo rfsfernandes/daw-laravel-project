@@ -4,12 +4,12 @@
     <script>
         var form = document.getElementById('schedule-form');
 
-        function processForm(){
+        function processForm() {
             let uc = document.getElementById('uc').value;
             let type = document.getElementById('type').value;
             let epoch = document.getElementById('epoch').value;
 
-            if( uc === "default" || type === "default" || epoch === "default") {
+            if (uc === "default" || type === "default" || epoch === "default") {
                 var x = document.getElementById('dark-overlay');
                 // Add the "show" class to DIV
                 x.className = "show";
@@ -135,41 +135,41 @@
                                     <form method="GET" action="/teachers/assessments/evaluate/{{ $assessment->id }}">
                                         @csrf
                                         <button type="submit"
-                                            class="state-clickable" style="text-decoration: none">
+                                                class="state-clickable" style="text-decoration: none">
                                             LANÇAR
                                         </button>
                                     </form>
 
                                 @endif
-{{--                               TODO: this row--}}
+                                {{--                               TODO: this row--}}
 
                             </td>
                         </tr>
                     @endforeach
 
-{{--                    @foreach($assessments as $assessment)--}}
-{{--                        --}}
-{{--                    @endforeach--}}
-{{--                    <tr class="tr-top">--}}
-{{--                        <td class="td-first">--}}
-{{--                            Sistemas Operativos--}}
-{{--                        </td>--}}
-{{--                        <td class="td-center">--}}
-{{--                            Frequência--}}
-{{--                        </td>--}}
-{{--                        <td class="td-center">--}}
-{{--                            Normal--}}
-{{--                        </td>--}}
-{{--                        <td class="td-center">--}}
-{{--                            S8--}}
-{{--                        </td>--}}
-{{--                        <td class="td-center">--}}
-{{--                            17/12/2020--}}
-{{--                        </td>--}}
-{{--                        <td class="td-center important">--}}
-{{--                            17--}}
-{{--                        </td>--}}
-{{--                    </tr>--}}
+                    {{--                    @foreach($assessments as $assessment)--}}
+                    {{--                        --}}
+                    {{--                    @endforeach--}}
+                    {{--                    <tr class="tr-top">--}}
+                    {{--                        <td class="td-first">--}}
+                    {{--                            Sistemas Operativos--}}
+                    {{--                        </td>--}}
+                    {{--                        <td class="td-center">--}}
+                    {{--                            Frequência--}}
+                    {{--                        </td>--}}
+                    {{--                        <td class="td-center">--}}
+                    {{--                            Normal--}}
+                    {{--                        </td>--}}
+                    {{--                        <td class="td-center">--}}
+                    {{--                            S8--}}
+                    {{--                        </td>--}}
+                    {{--                        <td class="td-center">--}}
+                    {{--                            17/12/2020--}}
+                    {{--                        </td>--}}
+                    {{--                        <td class="td-center important">--}}
+                    {{--                            17--}}
+                    {{--                        </td>--}}
+                    {{--                    </tr>--}}
                 </table>
             </div>
         </div>

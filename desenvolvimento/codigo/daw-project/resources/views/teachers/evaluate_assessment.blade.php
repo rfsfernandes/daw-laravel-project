@@ -34,7 +34,7 @@
                                 <td class="td-first">
                                     {{ $inscription->name }}
                                 </td>
-                                <td class="td-center" >
+                                <td class="td-center">
                                     <input hidden name="user_id[]" value="{{ $inscription->id }}">
                                     <input hidden name="enrollment_id[]" value="{{ $inscription->id_inscription }}">
                                     {{ $inscription->id }}

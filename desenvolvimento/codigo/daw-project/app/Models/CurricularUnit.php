@@ -8,11 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class CurricularUnit extends Model
 {
     use HasFactory;
+
     protected $table = 'curricular_unit';
     public $timestamps = false;
 
-    public function course()
+    public static function getCurricularUnitFromUCId($id_uc)
     {
-        return $this->hasOne('App\Models\Course', 'id_course');
+        return CurricularUnit::select('name_uc')->where('id', $id_uc)->first();
+    }
+
+    public static function getCurricularUnitFromIDs($ids)
+    {
+        return CurricularUnit::whereIn('id', $ids)->get();
     }
 }

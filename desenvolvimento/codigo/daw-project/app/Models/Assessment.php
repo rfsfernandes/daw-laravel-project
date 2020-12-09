@@ -8,21 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Assessment extends Model
 {
     use HasFactory;
+
     public $timestamps = false;
     protected $table = 'assessment';
 
-    public function curricularUnit()
+    public static function getAssessmentsByUserUCs($userUCs, $order)
     {
-        return $this->belongsTo('App\Models\CurricularUnit', 'id')->first();
+        return Assessment::whereIn('id_uc', $userUCs)->orderBy('datetime', $order)->get();
     }
 
-    public function epoch()
+    public static function saveAssessment(Assessment $assessment)
     {
-        return $this->belongsTo('App\Models\AssessmentEpoch', 'id')->first();
+
+        $assessment->save();
     }
 
-    public function assessmentType()
-    {
-        return $this->belongsTo('App\Models\AssessmentType', 'id')->first();
-    }
 }

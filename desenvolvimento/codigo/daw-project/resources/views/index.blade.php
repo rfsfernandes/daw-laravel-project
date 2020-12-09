@@ -31,9 +31,9 @@
             </div>
         </div>
     </div>
-    <div id="snackbar" ></div>
+    <div id="snackbar"></div>
     <script>
-        function showSnackbar(){
+        function showSnackbar() {
             var x = document.getElementById("snackbar");
             x.innerHTML = '{!! $error_snack !!}';
             // Add the "show" class to DIV

@@ -1,5 +1,5 @@
 <script>
-    function onClick(){
+    function onClick() {
         document.getElementById('dark-overlay').style.display = "none";
     }
 </script>

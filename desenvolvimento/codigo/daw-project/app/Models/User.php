@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
@@ -44,13 +44,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function userType()
+    public static function checkCredentials($email, $password)
     {
-        return $this->hasOne('App\Models\UserType', 'id_user_type');
+        $user = DB::table('user')->where('email', $email)->where('password', $password)->first();
+        return $user;
     }
 
-    public function userUC()
-    {
-        return $this->hasOne('App\Models\UserUC', 'id_course');
-    }
 }
